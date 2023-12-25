@@ -25,9 +25,18 @@ class Queue {
 		return this.first;
   }
 
-  enqueue(/* value */) {
-    throw new NotImplementedError('Not implemented');
+  enqueue(value) {
+    // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
+		let addList = new ListNode(value);
+
+		if (this.first === null) {
+      this.first = addList;
+		} else {
+			this.last.next = addList;
+		}
+		
+    this.last = addList;
   }
 
   dequeue() {
