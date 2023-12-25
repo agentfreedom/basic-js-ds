@@ -40,8 +40,17 @@ class Queue {
   }
 
   dequeue() {
-    throw new NotImplementedError('Not implemented');
+    // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
+		let deleteItem = this.first;
+
+		if (this.first === this.last) {
+      this.last = null;
+		} else {
+			this.first = this.first.next;
+		}
+
+    return deleteItem.value;
   }
 }
 
